@@ -97,13 +97,18 @@ header {
   max-width: 160px;
   border-radius: 5px;
   opacity: 0;
-  background: url(./img/rect.png);
+  background: url(./img/rectangle.png);
   visibility: hidden;
   transition: 0.4s;
 }
 
 * {
   box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 a {
@@ -201,6 +206,7 @@ p {
   background: #8f00ff;
   color: #ffffff;
   transition: 0.4s;
+  text-decoration: none;
 }
 
 .about__btn {
@@ -338,15 +344,17 @@ p {
   min-height: 140px;
 }
 
-.passed__games-date {
-  font-size: 14px;
+.single-game__games-date {
   font-weight: 400;
-  margin-bottom: 35px;
-  text-transform: lowercase;
+  font-size: 14px;
 }
 
-.passed__games-description {
-  font-size: 16px;
+.single-game__games-title {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.single-game__games-description {
   font-weight: 400;
 }
 
@@ -354,6 +362,18 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.pager--theme--light {
+  margin: 42px;
+}
+
+.pager--theme--light .pager__item--active .pager__link {
+  color: #fff;
+}
+
+.pager--theme--light .pager__link:hover {
+  color: #fff;
 }
 
 .pager__list {
@@ -366,7 +386,7 @@ p {
 }
 
 .pager__display {
-  margin-right: 26px;
+  margin-right: 20px;
 }
 
 .pager__item--active .pager__link {
@@ -374,7 +394,8 @@ p {
 }
 
 .pager__link {
-  display: block;
+  display: flex;
+  justify-content: space-evenly;
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -391,8 +412,8 @@ p {
   content: "";
   width: 489px;
   height: 505px;
-  background: url("./img/kviz_pliz__nizhnii_novgorod_1_qg_large\ 1.png") center
-    center / cover no-repeat;
+  background: url("./img/Mask\ Group\ \(1\).png") center center / cover
+    no-repeat;
   display: block;
 }
 
@@ -482,4 +503,243 @@ p {
 .footer .contacts {
   margin-right: 0;
   padding-top: 0;
+}
+
+/*games page*/
+
+.top-line {
+  min-height: 415px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 25px;
+  background: url(img/nbgB77C1HAg\ 1.png) center no-repeat;
+}
+
+.top-line__container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.top-line__header {
+  margin-bottom: 0;
+}
+
+.page-title {
+  line-height: 1;
+  font-weight: 700;
+  font-size: 72px;
+  color: #fff;
+}
+
+.breadcrumbs__list {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.breadcrumbs__item {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.breadcrumbs__item--active .breadcrumbs__link {
+  font-weight: 700;
+}
+
+.breadcrumbs__item:after {
+  content: "/";
+  color: #9a9a9a;
+}
+
+.breadcrumbs__item:last-child:after {
+  display: none;
+}
+
+.breadcrumbs__link {
+  color: #9a9a9a;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.page-content {
+  padding: 40px 0;
+  background: #fff;
+  color: #303030;
+}
+
+.services {
+  margin-bottom: 25px;
+}
+
+.service {
+  display: flex;
+  padding: 58px 43px;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+.service:hover {
+  background: #f4f5f5;
+}
+
+.service__img {
+  width: 45%;
+  margin-right: 5%;
+}
+
+.service__content {
+  flex: 1;
+}
+
+.service__title {
+  font-weight: 700;
+  font-size: 36px;
+  margin-bottom: 22px;
+  color: #000000;
+}
+
+.service__desc {
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.inner-section {
+  background: #fff;
+  color: #1a1b1e;
+  padding: 70px 0;
+}
+
+.inner-section--bg--grey {
+  background: #f4f5f5;
+}
+
+.inner-section__title {
+  font-weight: 700;
+  font-size: 48px;
+  margin-bottom: 70px;
+}
+
+.partners {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.partners__link {
+  text-decoration: none;
+  display: flex;
+  width: 270px;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  filter: grayscale(100%);
+}
+
+.partners__link:hover {
+  filter: grayscale(0);
+}
+
+.footer--games {
+  padding: 45px 0;
+  margin-top: auto;
+}
+
+/*feedback page*/
+
+.feedback {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.feedback__item {
+  background: #f4f5f5;
+  max-width: 535px;
+  padding: 30px 25px;
+  margin: 15px;
+}
+
+.feedback__top-section {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.feedback__top-section-img {
+  margin-right: 10px;
+}
+
+.feedback__top-section-avatar {
+  border-radius: 50%;
+}
+
+.feedback__top-section-link {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.feedback__top-section-games {
+  background: #b9eae4;
+  border-radius: 35px;
+  max-width: 95px;
+  font-weight: 400;
+  font-size: 13px;
+  text-align: center;
+  margin-top: 10px;
+  width: fit-content;
+}
+
+.feedback__top-section-vk-icon {
+  padding-bottom: 30px;
+}
+
+.feedback__middle-section-title {
+  font-weight: 700;
+  font-size: 30px;
+  padding: 25px 0;
+}
+
+.feedback__middle-section-description {
+  color: #818181;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.feedback__middle-section-date {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.feedback__searcher {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+}
+
+.feedback__searcher-description {
+  position: absolute;
+  font-weight: 700;
+  font-size: 48px;
+  color: #fff;
+  max-width: 383px;
+  top: 50%;
+  left: 25%;
+}
+
+.container--response {
+  background: #fff;
+}
+
+.response {
+  background: #f4f5f5;
+}
+
+.response__title {
+  padding: 30px 0;
+  font-weight: 700;
+  font-size: 48px;
+  color: #1a1b1e;
 }
